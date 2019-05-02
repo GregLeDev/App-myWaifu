@@ -1,0 +1,14 @@
+<li class="list-group-item" [ngStyle]="{background:colorLove()}">  
+    <h4><img [src]="imagesEdenZero"/> Titre : {{ blogTitre }}</h4>
+    <h4>Contenu : {{ blogContenu }}</h4>
+    <h4>I love it : {{ blogLove }}</h4>
+    <h4>Date de création de l'article : {{ blogDate | date: 'EEEE d MMMM y' }}</h4>
+    <button class="btn btn-success" 
+            id="love"
+            (click) = onLove()
+            (click) = onLoveSup()>I love It</button>
+            
+    <button class="btn btn-danger" 
+            id="noLove"
+            (click)="noLove()">I don't love It</button>
+</li>

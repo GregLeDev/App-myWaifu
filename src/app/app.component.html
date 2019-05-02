@@ -1,0 +1,28 @@
+<app-barre-de-navigation></app-barre-de-navigation>
+<header class="headerAppli">
+  <!-- <img [src]="imagesHeader"/> -->
+</header>
+<div class="appTitle">
+  <h1>
+    <!-- Titre de l'application -->
+    {{ appTitle }}
+  </h1>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <!-- phrase : "lequel prefere tu ?" -->
+          {{ blogTitle }}
+        </h2>
+        <ul class="list-group">
+          <app-blog *ngFor ="let blog of blogArticles"
+                    [blogTitre]="blog.titre"
+                    [blogContenu]="blog.contenu"
+                    [blogLove]="blog.loveIts"
+                    [blogDate]="blog.created_at"></app-blog>
+          </ul>
+      </div>
+    </div>
+  </div>
+<router-outlet></router-outlet>
